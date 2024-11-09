@@ -82,21 +82,35 @@ function showAlert(message) {
     alertBox.style.display = "none";
   }, 7000);
 }
+function showSignUpAlert(message) {
+  const alertBox = document.getElementById("customSignUpAlert");
+  const alertMessage = document.getElementById("signUpAlertMessage");
+  alertMessage.textContent = message;
+  alertBox.style.display = "flex";
+  document.getElementById("closeSignUpAlert").onclick = function () {
+    alertBox.style.display = "none";
+  };
+
+  setTimeout(() => {
+    alertBox.style.display = "none";
+  }, 7000);
+}
 
 $(document).on("click", "#createAcctBtn", function (e) {
-  console.log("clicked");
   e.preventDefault();
   let emailSignUp = $("#emailSignUp").val();
   let pwSignUp = $("#pwSignUp").val();
+
   createUserWithEmailAndPassword(auth, emailSignUp, pwSignUp)
     .then((userCredential) => {
       const user = userCredential.user;
       console.log(user);
+
+      showSignUpAlert("You have successfully signed up 🪧⬆️ !");
       $(".login").addClass(".signOut");
       $(".login").html("Logout");
     })
     .catch((error) => {
-      const errorCode = error.code;
       const errorMessage = error.message;
       alert("Error Message: " + errorMessage);
     });

@@ -228,6 +228,7 @@ p {
   background-repeat: no-repeat;
 }
 .footer-holder .icons .footer-icon1 {
+  color: #393939;
   background-image: url("../images/facebook.svg");
 }
 .footer-holder .icons .footer-icon2 {
@@ -456,10 +457,13 @@ p {
 .account-wrapper .login-wrapper h1 {
   font-size: 30px;
   font-weight: 100;
+  letter-spacing: 3px;
 }
 .account-wrapper .login-wrapper p {
   margin-bottom: 20px;
+  font-weight: 100;
   font-size: 12px;
+  font-family: latoI;
 }
 .account-wrapper .signupForm {
   display: flex;
@@ -470,6 +474,7 @@ p {
 .account-wrapper .signupForm .login-input {
   height: 22px;
   width: 206px;
+  font-weight: 100;
   border: 0;
   border-bottom: 3px solid #000;
   color: #000;
