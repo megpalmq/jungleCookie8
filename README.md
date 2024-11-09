@@ -12,4 +12,4 @@ For this project run npm i to install the required packages, then run npm start 
 We use firebase in this project to handle user authentication.
 
 web4 link :
-https://in-info-web4.luddy.indianapolis.iu.edu/~megpalmq/homework6/
+https://in-info-web4.luddy.indianapolis.iu.edu/~megpalmq/jungleCookie-hw7/dist/

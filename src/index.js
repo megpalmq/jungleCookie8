@@ -46,6 +46,8 @@ $(document).on("click", "#signIn", function (e) {
     .then((userCredential) => {
       const user = userCredential.user;
       console.log("User  signed in:", user);
+      showLogInAlert("You have successfully Logged In 😊 !");
+
       $(".login").addClass("signOut").text("Logout");
     })
     .catch((error) => {
@@ -69,12 +71,13 @@ setPersistence(auth, browserLocalPersistence)
   .catch((error) => {
     console.error("Error setting persistence:", error);
   });
-function showAlert(message) {
-  const alertBox = document.getElementById("customAlert");
-  const alertMessage = document.getElementById("alertMessage");
+
+function showLogInAlert(message) {
+  const alertBox = document.getElementById("customLogInAlert");
+  const alertMessage = document.getElementById("LogInAlertMessage");
   alertMessage.textContent = message;
   alertBox.style.display = "flex";
-  document.getElementById("closeAlert").onclick = function () {
+  document.getElementById("closeLogInAlert").onclick = function () {
     alertBox.style.display = "none";
   };
 
