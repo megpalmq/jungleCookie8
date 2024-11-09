@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mobile-overflow {
+  overflow: hidden;
+}
+
+html,
+body {
+  font-family: latoReg;
+  background-color: #222222;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+@font-face {
+  font-family: cavReg;
+  src: url(../fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: cavB;
+  src: url(../fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: latoReg;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoI;
+  src: url(../fonts/Lato-Italic.ttf);
+}
+@font-face {
+  font-family: latoBL;
+  src: url(../fonts/Lato-BlackItalic.ttf);
+}

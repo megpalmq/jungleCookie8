@@ -1,0 +1,142 @@
+.content {
+  height: 762px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content-box {
+    width: 700px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .circle {
+      width: 357.5px;
+      height: 357.5px;
+      border-radius: 400px;
+      background-color: $yellow;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 2px 7px rgba($color: #000000, $alpha: 0.2);
+      h1 {
+        font-family: cavB;
+        letter-spacing: 2.4px;
+        font-size: 30px;
+      }
+      p {
+        text-align: center;
+        font-family: latoReg;
+        font-size: 13px;
+        width: 170px;
+        letter-spacing: 1.6px;
+        margin-top: 15px;
+      }
+    }
+    .circle2 {
+      position: absolute;
+      margin-left: 330px;
+      margin-bottom: 330px;
+      width: 167.88px;
+      height: 167.88px;
+      border-radius: 400px;
+      background-color: $pinklight;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 2px 7px rgba($color: #000000, $alpha: 0.2);
+      p {
+        text-align: center;
+        font-family: latoI;
+        font-size: 10px;
+        width: 115px;
+        letter-spacing: 1.4px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.home-hero {
+  background-image: linear-gradient(rgba($red, 0.7), rgba($red, 0.7)),
+    url(../images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1280px) {
+  .content {
+    height: 630px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    .content-box {
+      .circle {
+        width: 357.5px;
+        height: 357.5px;
+        h1 {
+          letter-spacing: 2.4px;
+          font-size: 24px;
+        }
+        p {
+          font-size: 13px;
+          width: 170px;
+        }
+      }
+      .circle2 {
+        margin-left: 200px;
+        margin-bottom: 390px;
+        width: 167.88px;
+        height: 167.88px;
+        z-index: 2;
+        p {
+          font-size: 10px;
+          width: 115px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .content {
+    .content-box {
+      .circle {
+        width: 257.8px;
+        height: 257.8px;
+        h1 {
+          letter-spacing: 2.1px;
+          font-size: 17px;
+        }
+        p {
+          font-size: 9px;
+          width: 140px;
+        }
+      }
+      .circle2 {
+        margin-left: 130px;
+        margin-bottom: 285px;
+        width: 121px;
+        height: 121px;
+        z-index: 2;
+        p {
+          font-size: 8px;
+          width: 70px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

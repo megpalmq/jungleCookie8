@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Jungle Cook</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="nav-holder">
+        <div class="logo"></div>
+        <nav>
+          <ul>
+            <li><a href="#home" class="nav-links">Home</a></li>
+            <li><a href="#" class="nav-links">Browse</a></li>
+            <li><a href="#" class="nav-links">Create Recipe</a></li>
+            <li><a href="#login" class="login" id="loginbtn">Login</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger-icon" id="mobilebutton">
+          <span class="hamburgerMenu material-symbols-outlined"> menu </span>
+          <ul class="mobile-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#browse">Browse</a></li>
+            <li><a href="#create">Create Recipe</a></li>
+            <li><a href="#login" class="login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="app"></div>
+      <div class="footer-holder">
+        <p>Copyright © 2019 The Jungle Cook</p>
+        <div class="footer-links">
+          <a href="#login">Login</a>
+          <a href="#">Recipes by Category</a>
+          <a href="#">Privacy and Copyright</a>
+          <a href="#create">Create Recipe</a>
+          <a href="#">Your Recipes</a>
+        </div>
+        <div class="icons">
+          <a href="#" class="footer-icon1"></a>
+          <a href="#" class="footer-icon2"></a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="lib/jquery-3.7.1.min.js"></script>
+    <script type="module" src="app/app.js"></script>
+  </body>
+</html>

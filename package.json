@@ -1,0 +1,22 @@
+{
+  "name": "firstfb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server dist",
+    "build-webpack": "webpack",
+    "compile": "sass dist/scss/styles.scss dist/css/styles.css -w --no-source-map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^11.0.1",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "description": ""
+}
