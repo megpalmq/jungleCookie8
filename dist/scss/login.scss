@@ -57,7 +57,7 @@
     .login {
       cursor: pointer;
       position: absolute;
-      background-color: $yellow;
+      background-color: #ffd972;
       border: 0;
       padding: 10px 77.5px;
       color: #000;
@@ -74,7 +74,7 @@
     .signup {
       cursor: pointer;
       position: absolute;
-      background-color: $yellow;
+      background-color: #ffd972;
       border: 0;
       padding: 10px 87px;
       color: #000;
@@ -125,7 +125,7 @@
   .login {
     cursor: pointer;
     position: absolute;
-    background-color: $yellow;
+    background-color: #ffd972;
     border: 0;
     padding: 10px 77.5px;
     color: #000;
@@ -142,7 +142,7 @@
   .signup {
     cursor: pointer;
     position: absolute;
-    background-color: $yellow;
+    background-color: #ffd972;
     border: 0;
     padding: 10px 87px;
     color: #000;
@@ -159,7 +159,7 @@
 }
 
 .login-page {
-  background-color: $yellow;
+  background-color: #ffd972;
   position: fixed;
   height: calc(100vh + 120px);
   width: 100%;
@@ -182,7 +182,7 @@
   a {
     padding: 14px 80px;
     border-radius: 40px;
-    background-color: $yellow;
+    background-color: #ffd972;
     font-family: cavReg;
     font-size: 25px;
     text-decoration: none;

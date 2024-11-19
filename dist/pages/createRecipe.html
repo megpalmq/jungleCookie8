@@ -1,51 +1,34 @@
-<div class="hero4">
-  <div class="nav-container">
-    <a href="#home"> <div class="logo"></div></a>
-    <nav class="nav">
-      <ul class="nav--ul__one">
-        <li class="nav-link"><a id="home" href="#home">Home</a></li>
-        <li class="nav-link"><a id="browse" href="#browse">Browse</a></li>
-        <li class="nav-link">
-          <a id="createRecipe" href="#createRecipe">Create Recipe</a>
-        </li>
-      </ul>
-      <ul class="nav--ul__two">
-        <button class="loginBtn">
-          <li class="nav-link"><a id="login" href="#login">Login</a></li>
-        </button>
-      </ul>
-    </nav>
-    <span class="hamburger-menu material-symbols-outlined">menu</span>
-  </div>
-
-  <div class="createRecipe"></div>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-copyright">
-        <span>Copyright © 2019 The Jungle Cook</span>
+<div class="createRecipe">
+  <div class="form-container">
+    <div class="formHolder">
+      <h1>Hey USER create your recipe!</h1>
+      <div class="formRecipe">
+        <div class="imageBtn">Attach file</div>
+        <input id="imagePath" type="text" placeholder="Add Recipe Image" />
+        <input id="recipeName" type="text" placeholder="Recipe Name" />
+        <input id="recipeDesc" type="text" placeholder="Recipe Description" />
+        <input id="recipeTime" type="text" placeholder="Recipe Total Time" />
+        <input
+          id="recipeServingSize"
+          type="text"
+          placeholder="Recipe Serving Size"
+        />
       </div>
-      <div class="footer-links">
-        <ul>
-          <li class="footer-link"><a href="#login">Login</a></li>
-          <li class="footer-link"><a href="#">Recipes by Category</a></li>
-          <li class="footer-link"><a href="#">Privacy and Copyright</a></li>
-          <li class="footer-link">
-            <a href="#">Create Recipe</a>
-          </li>
-          <li class="footer-link">
-            <a href="#">Your Recipes</a>
-          </li>
-        </ul>
+      <div class="formDesc">
+        <h2>Enter Ingredients:</h2>
+        <input id="ingre0" type="text" placeholder="Ingredient #1" />
+        <input id="ingre1" type="text" placeholder="Ingredient #2" />
+        <input id="ingre2" type="text" placeholder="Ingredient #3" />
+        <div class="ingreBtn"><span>+</span></div>
       </div>
-      <div class="footer-social">
-        <a href="#" class="social-icon"
-          ><i class="fa-brands fa-square-facebook"></i
-        ></a>
-        <a href="#" class="social-icon"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
+      <div class="formInstr">
+        <h2>Enter Instructions:</h2>
+        <input id="instr0" type="text" placeholder="Instruction #1" />
+        <input id="instr1" type="text" placeholder="Instruction #2" />
+        <input id="instr2" type="text" placeholder="Instruction #3" />
+        <div class="instrBtn"><span>+</span></div>
       </div>
+      <div class="submit btn">Create Recipe</div>
     </div>
-  </footer>
+  </div>
 </div>

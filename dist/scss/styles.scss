@@ -1,8 +1,10 @@
-@import "variables.scss";
-@import "structure.scss";
-@import "nav.scss";
-@import "footer.scss";
-@import "hero.scss";
+@use "variables.scss";
+@use "structure.scss";
+@use "nav.scss";
+@use "footer.scss";
+@use "hero.scss";
 
-@import "home.scss";
-@import "login.scss";
+@use "home.scss";
+@use "login.scss";
+@use "browse.scss";
+@use "create.scss";

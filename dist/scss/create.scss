@@ -1,0 +1,143 @@
+.createRecipe {
+  background-color: #fff;
+  .form-container {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 150px;
+  }
+
+  .formHolder {
+    width: 100%;
+    padding-top: 20px;
+    h1 {
+      font-family: cavB;
+      font-size: 25px;
+      margin: 10px 0 60px 0;
+    }
+    h2 {
+      font-family: latoL;
+      font-size: 18px;
+      margin-top: 80px;
+    }
+    .formDesc {
+      margin-top: 50px;
+      width: 100%;
+      position: relative;
+      .ingreBtn {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        color: #fff;
+        font-size: 20px;
+        background-color: #efa7a7;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        cursor: pointer;
+        span {
+          margin-bottom: 3px;
+        }
+      }
+    }
+    .formInstr {
+      margin-top: 50px;
+      width: 100%;
+      position: relative;
+      .instrBtn {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        color: #fff;
+        font-size: 20px;
+        background-color: #efa7a7;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        cursor: pointer;
+        span {
+          margin-bottom: 3px;
+        }
+      }
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      height: 44px;
+      border: none;
+      border-bottom: 2px solid #000;
+      background-color: rgba($color: #000000, $alpha: 0);
+      padding-bottom: -5;
+      font-family: latoL;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 2px;
+    }
+  }
+
+  .formRecipe {
+    position: relative;
+    .imageBtn {
+      width: 110px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 40px;
+      color: #000;
+      font-size: 14px;
+      background-color: #efa7a7;
+      position: absolute;
+      right: 0;
+      top: 0px;
+      cursor: pointer;
+      font-family: cavReg;
+      font-size: 17px;
+    }
+  }
+
+  .btn {
+    width: 422px;
+    height: 52px;
+    border-radius: 40px;
+    background-color: #efa7a7;
+    font-family: cavReg;
+    color: #000;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  @media screen and (max-width: 390px) {
+    .form-container {
+      padding: 98px 38px;
+      input {
+        font-size: 12px;
+      }
+      .formRecipe {
+        .imageBtn {
+          width: 98px;
+          height: 33px;
+          font-size: 12px;
+        }
+      }
+    }
+    .btn {
+      width: 283px;
+      height: 52px;
+      font-size: 20px;
+    }
+  }
+}

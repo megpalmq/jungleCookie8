@@ -14,7 +14,7 @@
       width: 357.5px;
       height: 357.5px;
       border-radius: 400px;
-      background-color: $yellow;
+      background-color: #ffd972;
       z-index: 3;
       display: flex;
       flex-direction: column;
@@ -42,7 +42,7 @@
       width: 167.88px;
       height: 167.88px;
       border-radius: 400px;
-      background-color: $pinklight;
+      background-color: #fcbcb8;
       z-index: 2;
       display: flex;
       align-items: center;
@@ -61,7 +61,7 @@
 }
 
 .home-hero {
-  background-image: linear-gradient(rgba($red, 0.7), rgba($red, 0.7)),
+  background-image: linear-gradient(rgba(#f25c54, 0.7), rgba(#f25c54, 0.7)),
     url(../images/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
