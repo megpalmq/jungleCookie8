@@ -1,0 +1,115 @@
+<div class="createRecipes">
+  <div class="form-container">
+    <div class="formHolder">
+      <h1>Edit Your Recipe</h1>
+      <div class="formRecipe">
+        <!-- Custom button to trigger file input -->
+        <div class="imageBtn">Attach file</div>
+
+        <!-- Hidden file input for image upload -->
+        <input
+          id="imageUpload"
+          type="file"
+          style="display: none"
+          accept="image/*"
+        />
+
+        <!-- Text input to allow manual image URL input -->
+        <input id="imagePath" type="text" placeholder="Add Recipe Image" />
+
+        <label for="recipeName">Recipe Name</label>
+        <input
+          id="recipeName"
+          type="text"
+          placeholder="Recipe Name"
+          value="Supreme Pizza"
+        />
+
+        <label for="recipeDesc">Recipe Description</label>
+        <input
+          id="recipeDesc"
+          type="text"
+          placeholder="Recipe Description"
+          value="Make pizza night super duper out of this world with homemade pizza. This recipe is supreme with vegetables and two types of meat. Yum!"
+        />
+
+        <label for="recipeTime">Recipe Total Time</label>
+        <input
+          id="recipeTime"
+          type="text"
+          placeholder="Recipe Total Time"
+          value="1h 24min"
+        />
+
+        <label for="recipeServingSize">Recipe Serving Size</label>
+        <input
+          id="recipeServingSize"
+          type="text"
+          placeholder="Recipe Serving Size"
+          value="4 servings"
+        />
+
+        <div class="formDesc">
+          <h2>Enter Ingredients:</h2>
+          <label for="ingre0">Ingredient #1</label>
+          <input
+            id="ingre0"
+            type="text"
+            placeholder="Ingredient #1"
+            value="Tomato Sauce"
+          />
+
+          <label for="ingre1">Ingredient #2</label>
+          <input
+            id="ingre1"
+            type="text"
+            placeholder="Ingredient #2"
+            value="Cheese"
+          />
+
+          <label for="ingre2">Ingredient #3</label>
+          <input
+            id="ingre2"
+            type="text"
+            placeholder="Ingredient #3"
+            value="Pepperoni"
+          />
+
+          <div class="ingreBtn"><span>+</span></div>
+        </div>
+
+        <div class="formInstr">
+          <h2>Enter Instructions:</h2>
+          <label for="instr0">Instruction #1</label>
+          <input
+            id="instr0"
+            type="text"
+            placeholder="Instruction #1"
+            value="Spread tomato sauce on the pizza dough."
+          />
+
+          <label for="instr1">Instruction #2</label>
+          <input
+            id="instr1"
+            type="text"
+            placeholder="Instruction #2"
+            value="Add cheese and pepperoni."
+          />
+
+          <label for="instr2">Instruction #3</label>
+          <input
+            id="instr2"
+            type="text"
+            placeholder="Instruction #3"
+            value="Bake at 375°F for 20 minutes."
+          />
+
+          <div class="instrBtn"><span>+</span></div>
+        </div>
+
+        <div class="submit btn" id="saveButton">Save Recipe</div>
+        <div class="cancel btn" id="cancelButton">Cancel</div>
+      </div>
+    </div>
+  </div>
+</div>

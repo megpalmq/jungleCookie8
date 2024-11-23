@@ -1014,36 +1014,60 @@ p {
     width: 21px;
   }
 }
-.createRecipe {
+.createRecipes {
   background-color: #fff;
+  margin-top: -100px;
+  padding: 100px;
+  margin-bottom: -100px;
 }
-.createRecipe .form-container {
+.createRecipes .form-container {
   max-width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 50px 150px;
 }
-.createRecipe .formHolder {
+.createRecipes .formHolder {
   width: 100%;
   padding-top: 20px;
 }
-.createRecipe .formHolder h1 {
+.createRecipes .formHolder h1 {
   font-family: cavB;
   font-size: 25px;
   margin: 10px 0 60px 0;
 }
-.createRecipe .formHolder h2 {
+.createRecipes .formHolder h2 {
   font-family: latoL;
   font-size: 18px;
   margin-top: 80px;
 }
-.createRecipe .formHolder .formDesc {
+.createRecipes .formHolder .formDesc {
   margin-top: 50px;
   width: 100%;
   position: relative;
 }
-.createRecipe .formHolder .formDesc .ingreBtn {
+.createRecipes .formHolder .formDesc .ingreBtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: pink;
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  cursor: pointer;
+}
+.createRecipes .formHolder .formDesc .ingreBtn span {
+  margin-bottom: 3px;
+}
+.createRecipes .formHolder .formInstr {
+  margin-top: 50px;
+  width: 100%;
+  position: relative;
+}
+.createRecipes .formHolder .formInstr .instrBtn {
   width: 30px;
   height: 30px;
   display: flex;
@@ -1052,39 +1076,16 @@ p {
   border-radius: 40px;
   color: #fff;
   font-size: 20px;
-  background-color: #efa7a7;
+  background-color: pink;
   position: absolute;
   right: 0;
-  bottom: 10px;
+  bottom: 25px;
   cursor: pointer;
 }
-.createRecipe .formHolder .formDesc .ingreBtn span {
+.createRecipes .formHolder .formInstr .instrBtn span {
   margin-bottom: 3px;
 }
-.createRecipe .formHolder .formInstr {
-  margin-top: 50px;
-  width: 100%;
-  position: relative;
-}
-.createRecipe .formHolder .formInstr .instrBtn {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 40px;
-  color: #fff;
-  font-size: 20px;
-  background-color: #efa7a7;
-  position: absolute;
-  right: 0;
-  bottom: 10px;
-  cursor: pointer;
-}
-.createRecipe .formHolder .formInstr .instrBtn span {
-  margin-bottom: 3px;
-}
-.createRecipe .formHolder input {
+.createRecipes .formHolder input {
   display: block;
   width: 100%;
   margin-bottom: 20px;
@@ -1099,10 +1100,10 @@ p {
   letter-spacing: 2px;
   padding: 2px;
 }
-.createRecipe .formRecipe {
+.createRecipes .formRecipe {
   position: relative;
 }
-.createRecipe .formRecipe .imageBtn {
+.createRecipes .formRecipe .imageBtn {
   width: 110px;
   height: 36px;
   display: flex;
@@ -1111,7 +1112,7 @@ p {
   border-radius: 40px;
   color: #000;
   font-size: 14px;
-  background-color: #efa7a7;
+  background-color: pink;
   position: absolute;
   right: 0;
   top: 0px;
@@ -1119,11 +1120,11 @@ p {
   font-family: cavReg;
   font-size: 17px;
 }
-.createRecipe .btn {
+.createRecipes .btn {
   width: 422px;
   height: 52px;
   border-radius: 40px;
-  background-color: #efa7a7;
+  background-color: pink;
   font-family: cavReg;
   color: #000;
   margin: 100px auto;
@@ -1134,20 +1135,264 @@ p {
   font-size: 25px;
 }
 @media screen and (max-width: 390px) {
-  .createRecipe .form-container {
+  .createRecipes .form-container {
     padding: 98px 38px;
   }
-  .createRecipe .form-container input {
+  .createRecipes .form-container input {
     font-size: 12px;
   }
-  .createRecipe .form-container .formRecipe .imageBtn {
+  .createRecipes .form-container .formRecipe .imageBtn {
     width: 98px;
     height: 33px;
     font-size: 12px;
   }
-  .createRecipe .btn {
+  .createRecipes .btn {
     width: 283px;
     height: 52px;
     font-size: 20px;
+  }
+}
+
+.view-holder {
+  padding: 134px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  margin-top: -100px;
+  margin-bottom: -100px;
+  padding-top: 200px;
+}
+.view-holder img {
+  width: 468px;
+  height: 421px;
+  object-fit: cover;
+}
+.view-holder h1 {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -16px;
+  top: 400px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  font-size: 30px;
+  font-family: latoReg;
+}
+.view-holder .view-top {
+  display: flex;
+}
+.view-holder .view-top .view-description {
+  margin-left: 34px;
+}
+.view-holder .view-top .view-description h2 {
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+.view-holder .view-top .view-description p {
+  font-family: cavReg;
+  letter-spacing: 5px;
+  font-size: 20px;
+  margin-top: 34px;
+}
+.view-holder .view-top .view-description h3 {
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: 100;
+  margin-top: 36px;
+}
+.view-holder .view-ingredients {
+  margin-bottom: 20px;
+}
+.view-holder .view-ingredients h2 {
+  margin: 40px 0 30px 0;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+.view-holder .view-ingredients ul {
+  list-style-type: none;
+  font-family: cavReg;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.view-holder .view-instructions {
+  margin-bottom: 90px;
+}
+.view-holder .view-instructions h2 {
+  margin: 40px 0 30px 0;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+.view-holder .view-instructions li {
+  margin-left: 24px;
+  font-family: cavReg;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.view-holder a {
+  width: 128px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  background-color: #e1c066;
+  font-size: 20px;
+  font-family: cavReg;
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+}
+.view-holder a:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .view-holder .view-top {
+    flex-direction: column;
+  }
+  .view-holder .view-top .view-description {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .view-holder {
+    padding: 36px;
+  }
+  .view-holder img {
+    width: 251px;
+    height: 226px;
+    margin-left: 20px;
+  }
+  .view-holder h1 {
+    font-size: 20px;
+    left: -44px;
+    top: 260px;
+    font-family: latoReg;
+  }
+  .view-holder .view-description {
+    margin-bottom: 42px;
+  }
+  .view-holder .view-description h2 {
+    font-size: 20px;
+  }
+  .view-holder .view-description p {
+    font-size: 16px;
+  }
+  .view-holder .view-ingredients h2 {
+    font-size: 20px;
+  }
+  .view-holder .view-ingredients p {
+    font-size: 16px;
+  }
+  .view-holder .view-instructions {
+    margin-bottom: 40px;
+  }
+  .view-holder .view-instructions h2 {
+    font-size: 20px;
+  }
+  .view-holder .view-instructions p {
+    font-size: 16px;
+  }
+}
+#editRecipeForm {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type=text],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+  resize: none;
+}
+input[type=text]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #f07c00;
+  box-shadow: 0 0 5px rgba(240, 124, 0, 0.3);
+}
+input[type=text]::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.formDesc,
+.formInstr {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.submit,
+.cancel {
+  width: 100%;
+  padding: 15px;
+  background-color: #f07c00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.submit:hover,
+.cancel:hover {
+  background-color: rgb(189, 97.65, 0);
+}
+.submit:focus,
+.cancel:focus {
+  outline: none;
+}
+
+.cancel {
+  background-color: #d9534f;
+  margin-top: 10px;
+}
+.cancel:hover {
+  background-color: rgb(201.4953271028, 48.0841121495, 43.5046728972);
+}
+
+@media (max-width: 768px) {
+  #editRecipeForm {
+    padding: 15px;
+  }
+  input[type=text],
+  textarea,
+  .submit,
+  .cancel {
+    padding: 10px;
   }
 }

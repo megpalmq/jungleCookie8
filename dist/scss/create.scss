@@ -1,10 +1,12 @@
-.createRecipe {
+.createRecipes {
   background-color: #fff;
+  margin-top: -100px;
+  padding: 100px;
+  margin-bottom: -100px;
+
   .form-container {
     max-width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 50px 150px;
   }
 
@@ -32,12 +34,13 @@
         align-items: center;
         justify-content: center;
         border-radius: 40px;
-        color: #fff;
+        color: #ffffff;
         font-size: 20px;
-        background-color: #efa7a7;
+        background-color: pink;
         position: absolute;
         right: 0;
-        bottom: 10px;
+
+        bottom: 25px;
         cursor: pointer;
         span {
           margin-bottom: 3px;
@@ -57,10 +60,10 @@
         border-radius: 40px;
         color: #fff;
         font-size: 20px;
-        background-color: #efa7a7;
+        background-color: pink;
         position: absolute;
         right: 0;
-        bottom: 10px;
+        bottom: 25px;
         cursor: pointer;
         span {
           margin-bottom: 3px;
@@ -95,7 +98,7 @@
       border-radius: 40px;
       color: #000;
       font-size: 14px;
-      background-color: #efa7a7;
+      background-color: pink;
       position: absolute;
       right: 0;
       top: 0px;
@@ -109,7 +112,7 @@
     width: 422px;
     height: 52px;
     border-radius: 40px;
-    background-color: #efa7a7;
+    background-color: pink;
     font-family: cavReg;
     color: #000;
     margin: 100px auto;

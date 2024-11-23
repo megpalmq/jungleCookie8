@@ -1,0 +1,106 @@
+#editRecipeForm {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+// Form Input Styles
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+  resize: none;
+
+  &:focus {
+    outline: none;
+    border-color: #f07c00;
+    box-shadow: 0 0 5px rgba(240, 124, 0, 0.3);
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+// Label for Input Fields
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+// Ingredients and Instructions Fields (for inputs)
+.formDesc,
+.formInstr {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+// Buttons Container
+.submit,
+.cancel {
+  width: 100%;
+  padding: 15px;
+  background-color: #f07c00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    background-color: darken(#f07c00, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Cancel Button Styling (if needed)
+.cancel {
+  background-color: #d9534f;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: darken(#d9534f, 10%);
+  }
+}
+
+// Mobile Responsiveness
+@media (max-width: 768px) {
+  #editRecipeForm {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  textarea,
+  .submit,
+  .cancel {
+    padding: 10px;
+  }
+}
