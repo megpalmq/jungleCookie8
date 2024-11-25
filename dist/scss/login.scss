@@ -22,7 +22,7 @@
       font-family: latoI;
     }
   }
-  .signupForm {
+  .signUpForm {
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -49,7 +49,7 @@
       color: #000;
       font-size: 12px;
       font-family: latoReg;
-      background-color: rgba($color: #000000, $alpha: 0);
+      background-color: rgba($color: #885d5d, $alpha: 0);
       &:focus {
         outline: none;
       }
@@ -71,14 +71,14 @@
         border-bottom: 0px;
       }
     }
-    .signup {
+    .signUp {
       cursor: pointer;
       position: absolute;
       background-color: #ffd972;
       border: 0;
       padding: 10px 87px;
       color: #000;
-      margin: 260px 6px;
+      margin: 330px 6px;
       font-family: cavReg;
       font-size: 25px;
       border-radius: 40px;
@@ -114,7 +114,7 @@
     width: 250px;
     border: 0;
     border-bottom: 3px solid #000;
-    color: #000;
+    color: #000000;
     font-size: 12px;
     font-family: latoReg;
     background-color: rgba($color: #000000, $alpha: 0);
@@ -139,14 +139,14 @@
       border-bottom: 0px;
     }
   }
-  .signup {
+  .signUp {
     cursor: pointer;
     position: absolute;
     background-color: #ffd972;
     border: 0;
-    padding: 10px 87px;
+    padding: 10px 77.5px;
     color: #000;
-    margin: 260px 6px;
+    margin: 135px 4px;
     font-family: cavReg;
     font-size: 25px;
     border-radius: 40px;

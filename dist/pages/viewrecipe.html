@@ -1,18 +1,25 @@
-<div id="recipe-details">
-  <div class="view-holder">
-    <img id="recipeImage" src="" alt="Recipe Image" />
-    <h1 id="recipeName"></h1>
-    <div class="view-top">
-      <p class="view-description" id="recipeDesc"></p>
+<div class="view-holder">
+  <div class="view-top">
+    <div class="top">
+      <h1 id="recipe-title">Recipe Title</h1>
+      <img id="recipe-image" src="" alt="Recipe Image" />
     </div>
-
-    <p>Time:<span id="recipeTime"></span></p>
-    <p><strong>Serving Size:</strong> <span id="recipeServingSize"></span></p>
-    <div class="view-ingredients">
-      <h3>Ingredients:</h3>
-      <ul id="recipeIngredients"></ul>
+    <div class="view-description">
+      <h2>Description:</h2>
+      <p id="recipe-description">Recipe description goes here...</p>
+      <h3>Total Time:</h3>
+      <p id="recipe-time">Total time goes here...</p>
+      <h3>Servings:</h3>
+      <p id="recipe-servings">Number of servings goes here...</p>
     </div>
-
-    <div class="view-instructions"></div>
   </div>
+  <div class="view-ingredients">
+    <h2>Ingredients:</h2>
+    <ul id="recipe-ingredients"></ul>
+  </div>
+  <div class="view-instructions">
+    <h2>Instructions:</h2>
+    <ol id="recipe-instructions"></ol>
+  </div>
+  <a href="#" id="edit-recipe">Edit Recipe</a>
 </div>

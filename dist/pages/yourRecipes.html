@@ -3,32 +3,39 @@
   <h3 class="your-title">Hey Michael, here are your recipes!</h3>
   <div class="norecipe"></div>
   <div class="recipe-boxes">
-    <div class="recipe-box-ED">
-      <div class="recipe-box">
-        <div class="recipe-img">
-          <a href="#viewrecipe">View</a>
-          <img src="images/recipe-pizza.jpg" alt="pizza recipe" />
-        </div>
-        <div class="recipe-info">
-          <h4>Supreme Pizza</h4>
-          <p class="recipe-info-desc">
-            Make pizza night super duper out of this world with homemade pizza.
-            This recipe is supreme with vegetables and two types of meat. Yum!
-          </p>
-          <div class="time">
-            <img src="images/time.svg" alt="time" />
-            <p>1h 24min</p>
-          </div>
-          <div class="servings">
-            <img src="images/servings.svg" alt="servings" />
-            <p>4 servings</p>
-          </div>
-        </div>
+    <!-- Static Example Recipe for Supreme Pizza -->
+    <div class="recipe-box">
+      <div class="recipe-img">
+        <a
+          href="exampleRecipe.html"
+          class="viewRecipe"
+          onclick="storeRecipeData('Supreme Pizza')"
+          >View</a
+        >
+        <img src="images/recipe-pizza.jpg" alt="Pizza Recipe" />
       </div>
-      <div class="edit-delete-buttons">
-        <a href="#editRecipe">Edit Recipe</a>
-        <a href="#">Delete</a>
+      <div class="recipe-info">
+        <h4>Supreme Pizza</h4>
+        <p class="recipe-info-desc">
+          Make pizza night super duper out of this world with homemade pizza.
+          This recipe is supreme with vegetables and two types of meat. Yum!
+        </p>
+        <div class="time">
+          <img src="images/time.svg" alt="time" />
+          <p>1h 24min</p>
+        </div>
+        <div class="servings">
+          <img src="images/servings.svg" alt="servings" />
+          <p>4 servings</p>
+        </div>
       </div>
     </div>
+    <div class="edit-delete-buttons">
+      <a href="#">Edit Recipe</a>
+      <a href="#">Delete</a>
+    </div>
+
+    <!-- Dynamic User Recipes will go here -->
+    <div class="user-recipes"></div>
   </div>
 </div>

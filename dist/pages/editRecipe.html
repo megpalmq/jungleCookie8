@@ -3,10 +3,8 @@
     <div class="formHolder">
       <h1>Edit Your Recipe</h1>
       <div class="formRecipe">
-        <!-- Custom button to trigger file input -->
         <div class="imageBtn">Attach file</div>
 
-        <!-- Hidden file input for image upload -->
         <input
           id="imageUpload"
           type="file"
@@ -14,23 +12,17 @@
           accept="image/*"
         />
 
-        <!-- Text input to allow manual image URL input -->
         <input id="imagePath" type="text" placeholder="Add Recipe Image" />
 
         <label for="recipeName">Recipe Name</label>
-        <input
-          id="recipeName"
-          type="text"
-          placeholder="Recipe Name"
-          value="Supreme Pizza"
-        />
+        <input id="recipeName" type="text" placeholder="Recipe Name" value="" />
 
         <label for="recipeDesc">Recipe Description</label>
         <input
           id="recipeDesc"
           type="text"
           placeholder="Recipe Description"
-          value="Make pizza night super duper out of this world with homemade pizza. This recipe is supreme with vegetables and two types of meat. Yum!"
+          value=""
         />
 
         <label for="recipeTime">Recipe Total Time</label>
@@ -38,7 +30,7 @@
           id="recipeTime"
           type="text"
           placeholder="Recipe Total Time"
-          value="1h 24min"
+          value=""
         />
 
         <label for="recipeServingSize">Recipe Serving Size</label>
@@ -46,34 +38,19 @@
           id="recipeServingSize"
           type="text"
           placeholder="Recipe Serving Size"
-          value="4 servings"
+          value=""
         />
 
         <div class="formDesc">
           <h2>Enter Ingredients:</h2>
           <label for="ingre0">Ingredient #1</label>
-          <input
-            id="ingre0"
-            type="text"
-            placeholder="Ingredient #1"
-            value="Tomato Sauce"
-          />
+          <input id="ingre0" type="text" placeholder="Ingredient #1" value="" />
 
           <label for="ingre1">Ingredient #2</label>
-          <input
-            id="ingre1"
-            type="text"
-            placeholder="Ingredient #2"
-            value="Cheese"
-          />
+          <input id="ingre1" type="text" placeholder="Ingredient #2" value="" />
 
           <label for="ingre2">Ingredient #3</label>
-          <input
-            id="ingre2"
-            type="text"
-            placeholder="Ingredient #3"
-            value="Pepperoni"
-          />
+          <input id="ingre2" type="text" placeholder="Ingredient #3" value="" />
 
           <div class="ingreBtn"><span>+</span></div>
         </div>
@@ -85,7 +62,7 @@
             id="instr0"
             type="text"
             placeholder="Instruction #1"
-            value="Spread tomato sauce on the pizza dough."
+            value=""
           />
 
           <label for="instr1">Instruction #2</label>
@@ -93,7 +70,7 @@
             id="instr1"
             type="text"
             placeholder="Instruction #2"
-            value="Add cheese and pepperoni."
+            value=""
           />
 
           <label for="instr2">Instruction #3</label>
@@ -101,7 +78,7 @@
             id="instr2"
             type="text"
             placeholder="Instruction #3"
-            value="Bake at 375°F for 20 minutes."
+            value=""
           />
 
           <div class="instrBtn"><span>+</span></div>

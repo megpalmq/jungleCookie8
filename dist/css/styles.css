@@ -473,13 +473,13 @@ p {
   font-size: 12px;
   font-family: latoI;
 }
-.account-wrapper .signupForm {
+.account-wrapper .signUpForm {
   display: flex;
   flex-direction: column;
   row-gap: 40px;
   margin-top: 43px;
 }
-.account-wrapper .signupForm .login-input {
+.account-wrapper .signUpForm .login-input {
   height: 22px;
   width: 206px;
   font-weight: 100;
@@ -490,10 +490,10 @@ p {
   font-family: latoReg;
   background-color: rgba(0, 0, 0, 0);
 }
-.account-wrapper .signupForm .login-input:focus {
+.account-wrapper .signUpForm .login-input:focus {
   outline: none;
 }
-.account-wrapper .signupForm .signup-input {
+.account-wrapper .signUpForm .signup-input {
   height: 22px;
   width: 250px;
   border: 0;
@@ -501,12 +501,12 @@ p {
   color: #000;
   font-size: 12px;
   font-family: latoReg;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(136, 93, 93, 0);
 }
-.account-wrapper .signupForm .signup-input:focus {
+.account-wrapper .signUpForm .signup-input:focus {
   outline: none;
 }
-.account-wrapper .signupForm .login {
+.account-wrapper .signUpForm .login {
   cursor: pointer;
   position: absolute;
   background-color: #ffd972;
@@ -519,24 +519,24 @@ p {
   border-radius: 40px;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
 }
-.account-wrapper .signupForm .login:hover {
+.account-wrapper .signUpForm .login:hover {
   background-color: #e1c066;
   border-bottom: 0px;
 }
-.account-wrapper .signupForm .signup {
+.account-wrapper .signUpForm .signUp {
   cursor: pointer;
   position: absolute;
   background-color: #ffd972;
   border: 0;
   padding: 10px 87px;
   color: #000;
-  margin: 260px 6px;
+  margin: 330px 6px;
   font-family: cavReg;
   font-size: 25px;
   border-radius: 40px;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
 }
-.account-wrapper .signupForm .signup:hover {
+.account-wrapper .signUpForm .signUp:hover {
   background-color: #e1c066;
   border-bottom: 0px;
 }
@@ -565,7 +565,7 @@ p {
   width: 250px;
   border: 0;
   border-bottom: 3px solid #000;
-  color: #000;
+  color: #000000;
   font-size: 12px;
   font-family: latoReg;
   background-color: rgba(0, 0, 0, 0);
@@ -590,20 +590,20 @@ p {
   background-color: #e1c066;
   border-bottom: 0px;
 }
-.loginForm .signup {
+.loginForm .signUp {
   cursor: pointer;
   position: absolute;
   background-color: #ffd972;
   border: 0;
-  padding: 10px 87px;
+  padding: 10px 77.5px;
   color: #000;
-  margin: 260px 6px;
+  margin: 135px 4px;
   font-family: cavReg;
   font-size: 25px;
   border-radius: 40px;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
 }
-.loginForm .signup:hover {
+.loginForm .signUp:hover {
   background-color: #e1c066;
   border-bottom: 0px;
 }
@@ -1359,7 +1359,6 @@ label {
 .cancel {
   width: 100%;
   padding: 15px;
-  background-color: #f07c00;
   color: #fff;
   border: none;
   border-radius: 8px;
