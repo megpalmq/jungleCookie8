@@ -14,7 +14,6 @@
     text-align: center;
   }
 
-  // Form Input Styles
   input[type="text"],
   textarea {
     width: 100%;
@@ -39,7 +38,6 @@
     }
   }
 
-  // Label for Input Fields
   label {
     font-size: 16px;
     color: #333;
@@ -47,7 +45,6 @@
     display: block;
   }
 
-  // Ingredients and Instructions Fields (for inputs)
   .formDesc,
   .formInstr {
     margin-bottom: 15px;
@@ -56,7 +53,6 @@
     gap: 10px;
   }
 
-  // Buttons Container
   .submit,
   .cancel {
     width: 100%;

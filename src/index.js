@@ -19,14 +19,11 @@ const firebaseConfig = {
   appId: "1:719898029958:web:f5773562d03845d2fcc607",
 };
 
-// Initialize Firebase and Auth
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// State Variables
 let signedIn = false;
 
-// Initialize Page Listeners
 function initListeners() {
   $(window).on("hashchange", loadPage);
 }
@@ -35,13 +32,11 @@ $(document).on("click", ".viewRecipePizza", function (e) {
   alert("That's just an example, silly!");
 });
 
-// Handle Hamburger Menu Toggle
 $(".hamburger-icon").on("click", () => {
   $(".hamburger-icon").toggleClass("open");
   $("body").toggleClass("mobile-overflow");
 });
 
-// Handle Auth Changes
 setPersistence(auth, browserLocalPersistence)
   .then(() => {
     onAuthStateChanged(auth, (user) => {
@@ -69,7 +64,6 @@ function updateNavigation(user) {
   $("nav ul, .mobile-menu").html(navLinks);
 }
 
-// Authentication Event Handlers
 $(document).on("click", ".signOut", () => {
   signOut(auth)
     .then(() => alert("Logged out successfully"))
@@ -142,40 +136,33 @@ function saveRecipe(recipeIndex) {
   // Validate inputs
   if (!updatedRecipe.recipeName || !updatedRecipe.recipeDesc) {
     alert("Recipe name and description are required!");
-    return; // Stop further execution if validation fails
+    return;
   }
 
-  // Collect ingredients
   $(".formDesc input").each(function () {
     const value = $(this).val();
     if (value) updatedRecipe.ingredients.push(value);
   });
 
-  // Collect instructions
   $(".formInstr input").each(function () {
     const value = $(this).val();
     if (value) updatedRecipe.instructions.push(value);
   });
 
-  // Retrieve existing recipes from localStorage
   const recipes = JSON.parse(localStorage.getItem("recipes")) || [];
 
   if (recipeIndex !== undefined) {
-    // Update the existing recipe at recipeIndex
     recipes[recipeIndex] = updatedRecipe;
     alert("Recipe updated successfully!");
   } else {
-    // Add the new recipe to the list
     recipes.push(updatedRecipe);
     alert("Recipe saved successfully!");
   }
 
-  // Save the updated recipes list back to localStorage
   localStorage.setItem("recipes", JSON.stringify(recipes));
 
-  // Navigate back to the recipes list page
   window.location.hash = "#yourRecipes";
-  loadYourRecipes(); // Reload the recipes page to reflect the changes
+  loadYourRecipes();
 }
 
 function loadYourRecipes() {
@@ -231,7 +218,6 @@ $(document).on("click", ".viewRecipe", function (e) {
     return;
   }
 
-  // Load the view recipe page and populate details
   $.get("pages/viewrecipe.html", (data) => {
     $("#app").html(data);
     populateRecipeDetails(recipeData);
@@ -241,7 +227,7 @@ $(document).on("click", ".viewRecipe", function (e) {
 function populateRecipeDetails(recipe) {
   if (!recipe) {
     console.error("Recipe is undefined.");
-    return; // Exit if recipe is undefined
+    return;
   }
 
   $("#recipe-title").text(recipe.recipeName || "No Name Provided");
@@ -249,7 +235,6 @@ function populateRecipeDetails(recipe) {
   $("#recipe-time").text(recipe.recipeTime || "N/A");
   $("#recipe-servings").text(recipe.recipeServingSize || "N/A");
 
-  // Populate Ingredients
   const ingredientsList = $("#recipe-ingredients");
   ingredientsList.empty();
   if (recipe.ingredients && recipe.ingredients.length) {
@@ -260,7 +245,6 @@ function populateRecipeDetails(recipe) {
     ingredientsList.append("<li>No ingredients provided.</li>");
   }
 
-  // Populate Instructions
   const instructionsList = $("#recipe-instructions");
   instructionsList.empty();
   if (recipe.instructions && recipe.instructions.length) {
@@ -271,25 +255,23 @@ function populateRecipeDetails(recipe) {
     instructionsList.append("<li>No instructions provided.</li>");
   }
 
-  // If there's an image
   if (recipe.imagePath) {
     $("#recipe-image").attr("src", recipe.imagePath);
   }
 }
 $(document).on("click", ".cancel", function (e) {
   e.preventDefault();
-  window.location.hash = "#viewRecipes"; // Navigate back to the recipes list
-  loadYourRecipes(); // Reload the recipes list page if needed
+  window.location.hash = "#viewRecipes";
+  loadYourRecipes();
 });
 
-// Attach File Button
 $(document).on("click", ".imageBtn", function () {
-  $("#imageUpload").click(); // Trigger the file input click
+  $("#imageUpload").click();
 });
 
 $(document).on("change", "#imageUpload", function () {
   const filePath = this.files[0] ? URL.createObjectURL(this.files[0]) : "";
-  $("#imagePath").val(filePath); // Update the input with the file path
+  $("#imagePath").val(filePath);
 });
 
 $(document).on("click", ".editRecipe", function (e) {
@@ -323,7 +305,7 @@ $(document).on("click", ".editRecipe", function (e) {
       );
     });
 
-    setupFormHandlers(); // Ensure the event handlers are set after loading the page
+    setupFormHandlers();
   });
 });
 
@@ -335,21 +317,38 @@ $(document).on("click", ".deleteRecipe", function (e) {
   if (confirm("Are you sure you want to delete this recipe?")) {
     recipes.splice(recipeIndex, 1);
     localStorage.setItem("recipes", JSON.stringify(recipes));
-    loadYourRecipes(); // Reload the recipes page to reflect the changes
+    loadYourRecipes();
   }
 });
 
 function setupFormHandlers() {
-  // Handle image upload button click
+  if (!signedIn) {
+    alert("Can't make a recipe without logging in first.");
+    window.location.hash = "#login"; // Redirect to the login page
+    return; // Stop further execution
+  }
+
+  $(".formDesc").on("click", ".addField", function (e) {
+    e.preventDefault();
+    $(".formDesc").append('<input type="text" placeholder="Ingredient" />');
+  });
+
+  $(".formInstr").on("click", ".addField", function (e) {
+    e.preventDefault();
+    $(".formInstr").append('<input type="text" placeholder="Instruction" />');
+  });
+
+  $(".formCreate").on("submit", function (e) {
+    e.preventDefault();
+    saveRecipe();
+  });
   $(".imageBtn").on("click", () => $("#imageUpload").click());
 
-  // Handle image input change to set the image path
   $("#imageUpload").on("change", function () {
     const filePath = this.files[0] ? URL.createObjectURL(this.files[0]) : "";
     $("#imagePath").val(filePath);
   });
 
-  // Handle adding ingredients dynamically
   $(document).on("click", ".ingreBtn", function () {
     const currentIngreCount = $(".formDesc input").length + 1;
     $(".formDesc").append(
@@ -357,7 +356,6 @@ function setupFormHandlers() {
     );
   });
 
-  // Handle adding instructions dynamically
   $(document).on("click", ".instrBtn", function () {
     const currentInstrCount = $(".formInstr input").length + 1;
     $(".formInstr").append(
@@ -365,15 +363,13 @@ function setupFormHandlers() {
     );
   });
 
-  // Handle form submission (save recipe)
   $(".submit").on("click", (e) => {
     e.preventDefault();
-    saveRecipe(); // Call the function to save the recipe
-    window.location.hash = "#yourRecipes"; // Redirect to the 'yourRecipes' page after saving
+    saveRecipe();
+    window.location.hash = "#yourRecipes";
   });
 }
 
-// Initialize Application
 $(document).ready(() => {
   initListeners();
   if (!window.location.hash) {
