@@ -100,7 +100,6 @@ p {
   height: 55px;
 }
 .nav-holder .login {
-  background-color: #fff;
   text-decoration: none;
   color: #000;
   background-color: #ffd972;
@@ -1024,6 +1023,7 @@ p {
   max-width: 100%;
   display: flex;
   padding: 50px 150px;
+  flex-direction: column;
 }
 .createRecipes .formHolder {
   width: 100%;
@@ -1033,40 +1033,22 @@ p {
   font-family: cavB;
   font-size: 25px;
   margin: 10px 0 60px 0;
+  text-align: center;
 }
 .createRecipes .formHolder h2 {
   font-family: latoL;
   font-size: 18px;
   margin-top: 80px;
 }
-.createRecipes .formHolder .formDesc {
-  margin-top: 50px;
-  width: 100%;
-  position: relative;
-}
-.createRecipes .formHolder .formDesc .ingreBtn {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 40px;
-  color: #ffffff;
-  font-size: 20px;
-  background-color: pink;
-  position: absolute;
-  right: 0;
-  bottom: 25px;
-  cursor: pointer;
-}
-.createRecipes .formHolder .formDesc .ingreBtn span {
-  margin-bottom: 3px;
-}
+.createRecipes .formHolder .formDesc,
 .createRecipes .formHolder .formInstr {
   margin-top: 50px;
   width: 100%;
   position: relative;
 }
+.createRecipes .formHolder .formDesc .ingreBtn,
+.createRecipes .formHolder .formDesc .instrBtn,
+.createRecipes .formHolder .formInstr .ingreBtn,
 .createRecipes .formHolder .formInstr .instrBtn {
   width: 30px;
   height: 30px;
@@ -1082,6 +1064,9 @@ p {
   bottom: 25px;
   cursor: pointer;
 }
+.createRecipes .formHolder .formDesc .ingreBtn span,
+.createRecipes .formHolder .formDesc .instrBtn span,
+.createRecipes .formHolder .formInstr .ingreBtn span,
 .createRecipes .formHolder .formInstr .instrBtn span {
   margin-bottom: 3px;
 }
@@ -1092,13 +1077,16 @@ p {
   height: 44px;
   border: none;
   border-bottom: 2px solid #000;
-  background-color: rgba(0, 0, 0, 0);
-  padding-bottom: -5;
+  background-color: transparent;
   font-family: latoL;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
   padding: 2px;
+}
+.createRecipes .formHolder input:focus {
+  outline: none;
+  border-color: pink;
 }
 .createRecipes .formRecipe {
   position: relative;
@@ -1111,14 +1099,16 @@ p {
   justify-content: center;
   border-radius: 40px;
   color: #000;
-  font-size: 14px;
+  font-size: 17px;
   background-color: pink;
   position: absolute;
   right: 0;
   top: 0px;
   cursor: pointer;
   font-family: cavReg;
-  font-size: 17px;
+}
+.createRecipes .formRecipe .imageBtn:hover {
+  background-color: rgb(255, 141, 160.9047619048);
 }
 .createRecipes .btn {
   width: 422px;
@@ -1134,22 +1124,105 @@ p {
   cursor: pointer;
   font-size: 25px;
 }
-@media screen and (max-width: 390px) {
+.createRecipes .btn:hover {
+  background-color: rgb(255, 141, 160.9047619048);
+}
+@media screen and (max-width: 1200px) {
   .createRecipes .form-container {
-    padding: 98px 38px;
+    padding: 40px 100px;
   }
-  .createRecipes .form-container input {
-    font-size: 12px;
+  .createRecipes .btn {
+    width: 350px;
+    font-size: 22px;
   }
-  .createRecipes .form-container .formRecipe .imageBtn {
-    width: 98px;
-    height: 33px;
+}
+@media screen and (max-width: 768px) {
+  .createRecipes {
+    padding: 50px;
+  }
+  .createRecipes .form-container {
+    padding: 30px 50px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+  }
+  .createRecipes .formHolder h1 {
+    font-size: 22px;
+  }
+  .createRecipes .formHolder h2 {
+    font-size: 16px;
+    margin-top: 60px;
+  }
+  .createRecipes .formHolder input {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+  .createRecipes .formRecipe .imageBtn {
+    width: 90px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .createRecipes .btn {
+    width: 300px;
+    height: 48px;
+    font-size: 20px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .createRecipes {
+    padding: 20px;
+  }
+  .createRecipes .form-container {
+    padding: 20px;
+  }
+  .createRecipes .formHolder h1 {
+    font-size: 18px;
+  }
+  .createRecipes .formHolder h2 {
+    font-size: 14px;
+  }
+  .createRecipes .formHolder input {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  .createRecipes .formRecipe .imageBtn {
+    width: 80px;
+    height: 30px;
     font-size: 12px;
   }
   .createRecipes .btn {
-    width: 283px;
-    height: 52px;
-    font-size: 20px;
+    width: 250px;
+    height: 44px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .createRecipes {
+    padding: 15px;
+  }
+  .createRecipes .form-container {
+    padding: 15px;
+  }
+  .createRecipes .formHolder h1 {
+    font-size: 16px;
+  }
+  .createRecipes .formHolder h2 {
+    font-size: 12px;
+  }
+  .createRecipes .formHolder input {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .createRecipes .formRecipe .imageBtn {
+    width: 70px;
+    height: 28px;
+    font-size: 10px;
+  }
+  .createRecipes .btn {
+    width: 220px;
+    height: 40px;
+    font-size: 16px;
   }
 }
 
@@ -1180,22 +1253,24 @@ p {
 }
 .view-holder .view-top {
   display: flex;
+  gap: 50px;
 }
-.view-holder .view-top .view-description {
+.view-holder .view-top .recipe-description {
   margin-left: 34px;
 }
-.view-holder .view-top .view-description h2 {
+.view-holder .view-top .recipe-description h2 {
   font-size: 25px;
   letter-spacing: 5px;
   font-weight: 100;
+  margin-top: 36px;
 }
-.view-holder .view-top .view-description p {
+.view-holder .view-top .recipe-description p {
   font-family: cavReg;
   letter-spacing: 5px;
   font-size: 20px;
   margin-top: 34px;
 }
-.view-holder .view-top .view-description h3 {
+.view-holder .view-top .recipe-description h3 {
   font-size: 20px;
   letter-spacing: 5px;
   font-weight: 100;
@@ -1203,6 +1278,7 @@ p {
 }
 .view-holder .view-ingredients {
   margin-bottom: 20px;
+  margin-right: 600px;
 }
 .view-holder .view-ingredients h2 {
   margin: 40px 0 30px 0;
@@ -1218,6 +1294,7 @@ p {
 }
 .view-holder .view-instructions {
   margin-bottom: 90px;
+  margin-right: 600px;
 }
 .view-holder .view-instructions h2 {
   margin: 40px 0 30px 0;
@@ -1301,26 +1378,23 @@ p {
 #editRecipeForm {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
 }
-
-h2 {
+#editRecipeForm h2 {
   font-size: 24px;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center;
 }
-
-input[type=text],
-textarea {
+#editRecipeForm input[type=text],
+#editRecipeForm textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
@@ -1329,36 +1403,33 @@ textarea {
   transition: all 0.3s ease;
   resize: none;
 }
-input[type=text]:focus,
-textarea:focus {
+#editRecipeForm input[type=text]:focus,
+#editRecipeForm textarea:focus {
   outline: none;
   border-color: #f07c00;
   box-shadow: 0 0 5px rgba(240, 124, 0, 0.3);
 }
-input[type=text]::placeholder,
-textarea::placeholder {
+#editRecipeForm input[type=text]::placeholder,
+#editRecipeForm textarea::placeholder {
   color: #aaa;
 }
-
-label {
+#editRecipeForm label {
   font-size: 16px;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: block;
 }
-
-.formDesc,
-.formInstr {
-  margin-bottom: 20px;
+#editRecipeForm .formDesc,
+#editRecipeForm .formInstr {
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
-
-.submit,
-.cancel {
+#editRecipeForm .submit,
+#editRecipeForm .cancel {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -1367,31 +1438,394 @@ label {
   transition: background-color 0.3s ease;
   text-align: center;
 }
-.submit:hover,
-.cancel:hover {
+#editRecipeForm .submit:hover,
+#editRecipeForm .cancel:hover {
   background-color: rgb(189, 97.65, 0);
 }
-.submit:focus,
-.cancel:focus {
+#editRecipeForm .submit:focus,
+#editRecipeForm .cancel:focus {
   outline: none;
 }
-
-.cancel {
+#editRecipeForm .cancel {
   background-color: #d9534f;
   margin-top: 10px;
 }
-.cancel:hover {
+#editRecipeForm .cancel:hover {
   background-color: rgb(201.4953271028, 48.0841121495, 43.5046728972);
 }
-
-@media (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   #editRecipeForm {
     padding: 15px;
   }
-  input[type=text],
-  textarea,
-  .submit,
-  .cancel {
+  #editRecipeForm h2 {
+    font-size: 22px;
+  }
+  #editRecipeForm input[type=text],
+  #editRecipeForm textarea {
+    font-size: 15px;
+    padding: 8px;
+  }
+  #editRecipeForm .submit,
+  #editRecipeForm .cancel {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #editRecipeForm {
+    padding: 15px;
+    margin: 15px auto;
+  }
+  #editRecipeForm h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  #editRecipeForm input[type=text],
+  #editRecipeForm textarea {
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  #editRecipeForm .submit,
+  #editRecipeForm .cancel {
+    font-size: 14px;
     padding: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #editRecipeForm {
+    padding: 10px;
+    margin: 10px auto;
+  }
+  #editRecipeForm h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  #editRecipeForm input[type=text],
+  #editRecipeForm textarea {
+    font-size: 13px;
+    padding: 6px;
+    margin-bottom: 8px;
+  }
+  #editRecipeForm .submit,
+  #editRecipeForm .cancel {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 390px) {
+  #editRecipeForm {
+    padding: 8px;
+    margin: 8px auto;
+  }
+  #editRecipeForm h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  #editRecipeForm input[type=text],
+  #editRecipeForm textarea {
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  #editRecipeForm .submit,
+  #editRecipeForm .cancel {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+.pizzaRecipe .recipe-box-ED .recipe-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pizzaRecipe .recipe-box-ED .recipe-box .pizza-img {
+  width: 300px;
+  height: 263px;
+  border-radius: 20px;
+  background-image: url(../images/recipe-pizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pizzaRecipe .recipe-box-ED .recipe-box .pizza-img .viewRecipePizza {
+  width: 127px;
+  height: 42px;
+  text-decoration: none;
+  color: #000;
+  background-color: #ffd972;
+  font-size: 20px;
+  font-family: cavReg;
+  padding: 10px 42px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.pizzaRecipe .recipe-box-ED .recipe-box .pizza-img .viewRecipePizza:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+.pizzaRecipe .recipe-box-ED .recipe-box .recipe-info {
+  width: 224px;
+  height: 263px;
+  border-radius: 20px;
+  background-color: white;
+}
+.pizzaRecipe .recipe-box-ED .recipe-box .recipe-info h4 {
+  padding: 20px;
+  margin: 0 auto;
+  text-decoration: underline;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  margin-left: 30px;
+}
+.pizzaRecipe .recipe-box-ED .recipe-box .recipe-info-desc {
+  padding-top: 10px;
+  font-size: 9px;
+  font-family: lato;
+  width: 170px;
+  height: 55px;
+  margin: 0 auto;
+}
+.pizzaRecipe .recipe-box-ED .recipe-box .time,
+.pizzaRecipe .recipe-box-ED .recipe-box .servings {
+  width: 83px;
+  height: 24px;
+  display: flex;
+  font-family: lato;
+  font-size: 10px;
+  flex-direction: row;
+  margin-top: 19.5px;
+  margin-left: 60px;
+  justify-content: space-around;
+}
+
+.edit-delete-buttons-PZ {
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+.edit-delete-buttons-PZ .editRecipe {
+  width: 127px;
+  height: 42px;
+  text-decoration: none;
+  color: #000;
+  background-color: #ffd972;
+  font-size: 20px;
+  font-family: cavReg;
+  padding: 8px 27px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.edit-delete-buttons-PZ .editRecipe:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+.edit-delete-buttons-PZ .deleteRecipe {
+  width: 127px;
+  height: 42px;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #000;
+  background-color: #ffd972;
+  font-size: 20px;
+  font-family: cavReg;
+  padding: 8px 42px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.edit-delete-buttons-PZ .deleteRecipe:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .pizzaRecipe .recipe-box-ED .recipe-box {
+    flex-direction: column;
+  }
+  .pizzaRecipe .recipe-box-ED .recipe-box .pizza-img {
+    width: 80%;
+    height: 200px;
+  }
+  .pizzaRecipe .recipe-box-ED .recipe-box .recipe-info {
+    width: 80%;
+    height: 200px;
+    justify-content: center;
+  }
+  .edit-delete-buttons-PZ .deleteRecipe {
+    margin-left: 150px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .pizzaRecipe .recipe-box-ED .recipe-box {
+    flex-direction: column;
+  }
+  .pizzaRecipe .recipe-box-ED .recipe-box .pizza-img {
+    width: 110%;
+    height: 200px;
+  }
+  .pizzaRecipe .recipe-box-ED .recipe-box .recipe-info {
+    width: 110%;
+    height: 200px;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .site-wrapper #app .recipe-content .recipe-boxes {
+    max-width: 100%;
+    justify-content: space-between;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pizzaRecipe {
+    flex-direction: column;
+  }
+  .recipe-content h3 {
+    margin-left: 30px;
+  }
+  .recipe-content .recipe-boxes .recipe-box {
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-img {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-img a {
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    padding: 8px 56.5px;
+    font-size: 18px;
+    background-color: #ffd972;
+    color: #000;
+    text-decoration: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-img a:hover {
+    background-color: #e1c066;
+    border-bottom: 0px;
+  }
+  .recipe-content .recipe-boxes .recipe-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info {
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    padding: 14px;
+    background-color: white;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info h4 {
+    font-size: 14px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc {
+    font-size: 10px;
+    width: 100%;
+    height: 44px;
+    overflow-y: hidden;
+    margin: 5px 0;
+    justify-content: center;
+    margin-left: 100px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .time,
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .servings {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .time p,
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .servings p {
+    font-size: 10px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .time img,
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .servings img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .recipe-hero {
+    height: 200vh;
+  }
+  .recipe-content {
+    padding: 30px;
+  }
+  .recipe-content h3 {
+    margin-left: 7px;
+    margin-bottom: 28px;
+    font-size: 22px;
+  }
+  .recipe-content .your-title {
+    margin-left: 28px;
+    margin-bottom: 28px;
+    font-size: 20px;
+  }
+  .recipe-content .recipe-boxes .edit-delete-buttons {
+    width: 300px;
+    justify-content: space-between;
+  }
+  .recipe-content .recipe-boxes .edit-delete-buttons a {
+    height: 37px;
+    width: 141px;
+  }
+  .recipe-content .recipe-boxes .recipe-box {
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-img a {
+    padding: 8px 56.5px;
+    top: 18%;
+    left: 150px;
+    font-size: 18px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-img a:hover {
+    background-color: #e1c066;
+    border-bottom: 0px;
+  }
+  .recipe-content .recipe-boxes .recipe-box img {
+    width: 298px;
+    height: 150px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info {
+    width: 298px;
+    height: 170px;
+    padding: 14px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info h4 {
+    font-size: 10px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc {
+    font-size: 8px;
+    width: 153px;
+    height: 44px;
+    overflow-y: hidden;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc-2,
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc-3 {
+    font-size: 8px;
+    width: 153px;
+    height: 44px;
+    overflow-y: hidden;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .time p,
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .servings p {
+    font-size: 8px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .time img,
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .servings img {
+    height: 21px;
+    width: 21px;
   }
 }

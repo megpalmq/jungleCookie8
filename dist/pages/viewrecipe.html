@@ -1,25 +1,31 @@
-<div class="view-holder">
-  <div class="view-top">
-    <div class="top">
-      <h1 id="recipe-title">Recipe Title</h1>
-      <img id="recipe-image" src="" alt="Recipe Image" />
+<div id="viewrecipe">
+  <div class="view-holder">
+    <div class="view-top">
+      <div class="top">
+        <h1 id="recipe-title">Recipe Title</h1>
+        <img id="recipe-image" src="" alt="Recipe Image" />
+      </div>
+      <div class="recipe-description">
+        <h2>Description:</h2>
+        <p id="recipe-description"></p>
+        <h3>Total Time:</h3>
+        <p id="recipe-time"></p>
+        <h3>Servings:</h3>
+        <p id="recipe-servings">Number of servings goes here...</p>
+      </div>
     </div>
-    <div class="view-description">
-      <h2>Description:</h2>
-      <p id="recipe-description">Recipe description goes here...</p>
-      <h3>Total Time:</h3>
-      <p id="recipe-time">Total time goes here...</p>
-      <h3>Servings:</h3>
-      <p id="recipe-servings">Number of servings goes here...</p>
+    <div class="view-ingredients">
+      <h2>Ingredients:</h2>
+      <ul id="recipe-ingredients"></ul>
     </div>
+    <div class="view-instructions">
+      <h2>Instructions:</h2>
+      <ol id="recipe-instructions"></ol>
+    </div>
+    <a href="#editRecipe" class="editRecipe">Edit Recipe</a>
   </div>
-  <div class="view-ingredients">
-    <h2>Ingredients:</h2>
-    <ul id="recipe-ingredients"></ul>
-  </div>
-  <div class="view-instructions">
-    <h2>Instructions:</h2>
-    <ol id="recipe-instructions"></ol>
-  </div>
-  <a href="#" id="edit-recipe">Edit Recipe</a>
+</div>
+<div class="recipe-container">
+  <div id="recipe-details"></div>
+  <!-- Where recipe details will be injected -->
 </div>

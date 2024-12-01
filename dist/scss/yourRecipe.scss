@@ -1,0 +1,366 @@
+.pizzaRecipe {
+  .recipe-box-ED {
+    .recipe-box {
+      display: flex;
+      flex-wrap: wrap;
+
+      .pizza-img {
+        width: 300px;
+        height: 263px;
+        border-radius: 20px;
+        background-image: url(../images/recipe-pizza.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex; // Enable flexbox for centering
+        justify-content: center; // Center horizontally
+        align-items: center; // Center vertically
+
+        .viewRecipePizza {
+          width: 127px;
+          height: 42px;
+          text-decoration: none;
+          color: #000;
+          background-color: #ffd972;
+          font-size: 20px;
+          font-family: cavReg;
+          padding: 10px 42px;
+          border-radius: 40px;
+          box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+
+          &:hover {
+            background-color: #e1c066;
+            border-bottom: 0px;
+          }
+        }
+      }
+
+      .recipe-info {
+        width: 224px;
+        height: 263px;
+        border-radius: 20px;
+        background-color: white;
+
+        h4 {
+          padding: 20px;
+          margin: 0 auto;
+          text-decoration: underline;
+          font-weight: 100;
+          letter-spacing: 1.5px;
+          margin-left: 30px;
+        }
+      }
+
+      .recipe-info-desc {
+        padding-top: 10px;
+        font-size: 9px;
+        font-family: lato;
+        width: 170px;
+        height: 55px;
+        margin: 0 auto;
+      }
+
+      .time,
+      .servings {
+        width: 83px;
+        height: 24px;
+        display: flex;
+        font-family: lato;
+        font-size: 10px;
+        flex-direction: row;
+        margin-top: 19.5px;
+        margin-left: 60px;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+.edit-delete-buttons-PZ {
+  margin-top: 20px;
+  padding-bottom: 30px;
+
+  .editRecipe {
+    width: 127px;
+    height: 42px;
+    text-decoration: none;
+    color: #000;
+    background-color: #ffd972;
+    font-size: 20px;
+    font-family: cavReg;
+    padding: 8px 27px;
+    border-radius: 40px;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background-color: #e1c066;
+      border-bottom: 0px;
+    }
+  }
+
+  .deleteRecipe {
+    width: 127px;
+    height: 42px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #000;
+    background-color: #ffd972;
+    font-size: 20px;
+    font-family: cavReg;
+    padding: 8px 42px;
+    border-radius: 40px;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background-color: #e1c066;
+      border-bottom: 0px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .pizzaRecipe {
+    .recipe-box-ED {
+      .recipe-box {
+        flex-direction: column; // Stack items vertically
+
+        .pizza-img {
+          width: 80%;
+          height: 200px;
+        }
+
+        .recipe-info {
+          width: 80%;
+          height: 200px;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .edit-delete-buttons-PZ {
+    .editRecipe {
+      &:hover {
+      }
+    }
+
+    .deleteRecipe {
+      margin-left: 150px;
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  .pizzaRecipe {
+    .recipe-box-ED {
+      .recipe-box {
+        flex-direction: column;
+
+        .pizza-img {
+          width: 110%;
+          height: 200px;
+        }
+
+        .recipe-info {
+          width: 110%;
+          height: 200px;
+          justify-content: center;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .site-wrapper {
+    #app {
+      .recipe-content {
+        .recipe-boxes {
+          max-width: 100%;
+          justify-content: space-between;
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pizzaRecipe {
+    flex-direction: column;
+  }
+  .recipe-content {
+    h3 {
+      margin-left: 30px;
+    }
+
+    .recipe-boxes {
+      .recipe-box {
+        margin: 0 auto;
+        flex-direction: column;
+
+        .recipe-img {
+          width: 100%; // Make image full width
+          height: 200px; // Fixed height for image
+          position: relative;
+          margin-bottom: 10px; // Space below the image
+
+          a {
+            left: 50%;
+            top: 40%;
+            transform: translateX(-50%);
+            padding: 8px 56.5px;
+            font-size: 18px;
+            background-color: #ffd972;
+            color: #000;
+            text-decoration: none;
+            border-radius: 40px;
+            box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+            &:hover {
+              background-color: #e1c066;
+              border-bottom: 0px;
+            }
+          }
+        }
+
+        img {
+          width: 100%; // Make sure image fits inside the box
+          height: 100%; // Maintain height
+          object-fit: cover; // Ensure the image maintains aspect ratio
+          border-radius: 20px;
+        }
+
+        .recipe-info {
+          width: 100%;
+          height: 60%;
+          justify-content: center;
+          padding: 14px;
+          background-color: white;
+          box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+          border-radius: 20px;
+
+          h4 {
+            font-size: 14px;
+          }
+
+          .recipe-info-desc {
+            font-size: 10px;
+            width: 100%;
+            height: 44px;
+            overflow-y: hidden;
+            margin: 5px 0;
+            justify-content: center;
+            margin-left: 100px;
+          }
+
+          .time,
+          .servings {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+
+            p {
+              font-size: 10px;
+            }
+
+            img {
+              width: 20px;
+              height: 20px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .recipe-hero {
+    height: 200vh;
+  }
+
+  .recipe-content {
+    padding: 30px;
+
+    h3 {
+      margin-left: 7px;
+      margin-bottom: 28px;
+      font-size: 22px;
+    }
+
+    .your-title {
+      margin-left: 28px;
+      margin-bottom: 28px;
+      font-size: 20px;
+    }
+
+    .recipe-boxes {
+      .edit-delete-buttons {
+        width: 300px;
+        justify-content: space-between;
+        a {
+          height: 37px;
+          width: 141px;
+        }
+      }
+
+      .recipe-box {
+        margin: 0 auto;
+        flex-direction: column; // Stack image and info
+        .recipe-img {
+          a {
+            padding: 8px 56.5px;
+            top: 18%;
+            left: 150px;
+            font-size: 18px;
+            &:hover {
+              background-color: #e1c066;
+              border-bottom: 0px;
+            }
+          }
+        }
+
+        img {
+          width: 298px;
+          height: 150px;
+        }
+
+        .recipe-info {
+          width: 298px;
+          height: 170px;
+          padding: 14px;
+
+          h4 {
+            font-size: 10px;
+          }
+
+          .recipe-info-desc {
+            font-size: 8px;
+            width: 153px;
+            height: 44px;
+            overflow-y: hidden;
+          }
+
+          .recipe-info-desc-2,
+          .recipe-info-desc-3 {
+            font-size: 8px;
+            width: 153px;
+            height: 44px;
+            overflow-y: hidden;
+          }
+
+          .time,
+          .servings {
+            p {
+              font-size: 8px;
+            }
+            img {
+              height: 21px;
+              width: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

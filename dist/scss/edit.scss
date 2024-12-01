@@ -1,106 +1,175 @@
 #editRecipeForm {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
 
-h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-// Form Input Styles
-input[type="text"],
-textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
-  background-color: #fff;
-  color: #333;
-  transition: all 0.3s ease;
-  resize: none;
-
-  &:focus {
-    outline: none;
-    border-color: #f07c00;
-    box-shadow: 0 0 5px rgba(240, 124, 0, 0.3);
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
   }
 
-  &::placeholder {
-    color: #aaa;
-  }
-}
-
-// Label for Input Fields
-label {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 10px;
-  display: block;
-}
-
-// Ingredients and Instructions Fields (for inputs)
-.formDesc,
-.formInstr {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-// Buttons Container
-.submit,
-.cancel {
-  width: 100%;
-  padding: 15px;
-  //background-color: #f07c00;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-align: center;
-
-  &:hover {
-    background-color: darken(#f07c00, 10%);
-  }
-
-  &:focus {
-    outline: none;
-  }
-}
-
-// Cancel Button Styling (if needed)
-.cancel {
-  background-color: #d9534f;
-  margin-top: 10px;
-
-  &:hover {
-    background-color: darken(#d9534f, 10%);
-  }
-}
-
-// Mobile Responsiveness
-@media (max-width: 768px) {
-  #editRecipeForm {
-    padding: 15px;
-  }
-
+  // Form Input Styles
   input[type="text"],
-  textarea,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+    resize: none;
+
+    &:focus {
+      outline: none;
+      border-color: #f07c00;
+      box-shadow: 0 0 5px rgba(240, 124, 0, 0.3);
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  // Label for Input Fields
+  label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  // Ingredients and Instructions Fields (for inputs)
+  .formDesc,
+  .formInstr {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  // Buttons Container
   .submit,
   .cancel {
+    width: 100%;
+    padding: 12px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+
+    &:hover {
+      background-color: darken(#f07c00, 10%);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .cancel {
+    background-color: #d9534f;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: darken(#d9534f, 10%);
+    }
+  }
+
+  // Responsive Media Queries
+  @media screen and (max-width: 1200px) {
+    padding: 15px;
+    h2 {
+      font-size: 22px;
+    }
+    input[type="text"],
+    textarea {
+      font-size: 15px;
+      padding: 8px;
+    }
+    .submit,
+    .cancel {
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+    margin: 15px auto;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      font-size: 14px;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    .submit,
+    .cancel {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
     padding: 10px;
+    margin: 10px auto;
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    textarea {
+      font-size: 13px;
+      padding: 6px;
+      margin-bottom: 8px;
+    }
+
+    .submit,
+    .cancel {
+      font-size: 13px;
+      padding: 8px;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    padding: 8px;
+    margin: 8px auto;
+
+    h2 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      font-size: 12px;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+
+    .submit,
+    .cancel {
+      font-size: 12px;
+      padding: 6px;
+    }
   }
 }

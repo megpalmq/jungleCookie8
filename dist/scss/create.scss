@@ -8,49 +8,33 @@
     max-width: 100%;
     display: flex;
     padding: 50px 150px;
+    flex-direction: column; // Default for better responsiveness
   }
 
   .formHolder {
     width: 100%;
     padding-top: 20px;
+
     h1 {
       font-family: cavB;
       font-size: 25px;
       margin: 10px 0 60px 0;
+      text-align: center;
     }
+
     h2 {
       font-family: latoL;
       font-size: 18px;
       margin-top: 80px;
     }
-    .formDesc {
-      margin-top: 50px;
-      width: 100%;
-      position: relative;
-      .ingreBtn {
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 40px;
-        color: #ffffff;
-        font-size: 20px;
-        background-color: pink;
-        position: absolute;
-        right: 0;
 
-        bottom: 25px;
-        cursor: pointer;
-        span {
-          margin-bottom: 3px;
-        }
-      }
-    }
+    .formDesc,
     .formInstr {
       margin-top: 50px;
       width: 100%;
       position: relative;
+
+      .ingreBtn,
       .instrBtn {
         width: 30px;
         height: 30px;
@@ -65,11 +49,13 @@
         right: 0;
         bottom: 25px;
         cursor: pointer;
+
         span {
           margin-bottom: 3px;
         }
       }
     }
+
     input {
       display: block;
       width: 100%;
@@ -77,18 +63,23 @@
       height: 44px;
       border: none;
       border-bottom: 2px solid #000;
-      background-color: rgba($color: #000000, $alpha: 0);
-      padding-bottom: -5;
+      background-color: transparent;
       font-family: latoL;
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 2px;
       padding: 2px;
+
+      &:focus {
+        outline: none;
+        border-color: pink;
+      }
     }
   }
 
   .formRecipe {
     position: relative;
+
     .imageBtn {
       width: 110px;
       height: 36px;
@@ -97,14 +88,17 @@
       justify-content: center;
       border-radius: 40px;
       color: #000;
-      font-size: 14px;
+      font-size: 17px;
       background-color: pink;
       position: absolute;
       right: 0;
       top: 0px;
       cursor: pointer;
       font-family: cavReg;
-      font-size: 17px;
+
+      &:hover {
+        background-color: darken(pink, 10%);
+      }
     }
   }
 
@@ -121,26 +115,136 @@
     justify-content: center;
     cursor: pointer;
     font-size: 25px;
+
+    &:hover {
+      background-color: darken(pink, 10%);
+    }
+  }
+
+  // Responsive Media Queries
+  @media screen and (max-width: 1200px) {
+    .form-container {
+      padding: 40px 100px;
+    }
+
+    .btn {
+      width: 350px;
+      font-size: 22px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 50px;
+
+    .form-container {
+      padding: 30px 50px;
+      margin-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .formHolder {
+      h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 16px;
+        margin-top: 60px;
+      }
+
+      input {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+      }
+    }
+
+    .formRecipe {
+      .imageBtn {
+        width: 90px;
+        height: 32px;
+        font-size: 14px;
+      }
+    }
+
+    .btn {
+      width: 300px;
+      height: 48px;
+      font-size: 20px;
+      margin-bottom: 100px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+
+    .form-container {
+      padding: 20px;
+    }
+
+    .formHolder {
+      h1 {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+
+      input {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .formRecipe {
+      .imageBtn {
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+
+    .btn {
+      width: 250px;
+      height: 44px;
+      font-size: 18px;
+    }
   }
 
   @media screen and (max-width: 390px) {
+    padding: 15px;
+
     .form-container {
-      padding: 98px 38px;
-      input {
+      padding: 15px;
+    }
+
+    .formHolder {
+      h1 {
+        font-size: 16px;
+      }
+
+      h2 {
         font-size: 12px;
       }
-      .formRecipe {
-        .imageBtn {
-          width: 98px;
-          height: 33px;
-          font-size: 12px;
-        }
+
+      input {
+        font-size: 12px;
+        letter-spacing: 0.5px;
       }
     }
+
+    .formRecipe {
+      .imageBtn {
+        width: 70px;
+        height: 28px;
+        font-size: 10px;
+      }
+    }
+
     .btn {
-      width: 283px;
-      height: 52px;
-      font-size: 20px;
+      width: 220px;
+      height: 40px;
+      font-size: 16px;
     }
   }
 }
