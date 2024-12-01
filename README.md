@@ -10,5 +10,5 @@ Make sure you get your styling done first. Then your functionality.
 Have your project on Github with a Full README file description of your project. I want full details about what the application does and how it works.
 Deploy this to Web4 and to Github as well. Remember to add to your Readme file and put the link to Firebase link inside the Readme file.
 
-web4 link :
-https://in-info-web4.luddy.indianapolis.iu.edu/~megpalmq/jungleCookie888/dist/#home
+web4 link 🦆 :
+https://in-info-web4.luddy.indianapolis.iu.edu/~megpalmq/jungleCookieee8/dist/#home
